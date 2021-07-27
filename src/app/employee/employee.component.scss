@@ -1,0 +1,91 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        background: rgb(238, 238, 238);
+        padding: 1em;
+        margin-right: 10px;
+        width: 20%;
+        height: 200px;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: 0;
+        }
+
+        p.name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        p.state {
+            text-transform: uppercase;
+            font-size: .9rem;
+            flex-grow: 1;
+        }
+    }
+}
+
+.button-new {
+     background-color: skyblue;
+     border: none;
+     padding: 10px 10px 10px 10px;
+     border-radius: 4px;     
+     cursor: pointer;
+     font-size: 18px;
+   }
+
+   .button-new:hover {
+    background-color: rgb(59, 194, 248);
+    box-shadow: 0 5px 5px 0 skyblue,  0 5px 5px 0 skyblue;
+  }
+
+  .button-create{
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;     
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .button-create:hover {
+    background-color: rgb(4, 233, 4);
+    box-shadow: 0 5px 5px 0 lightgreen,  0 5px 5px 0 lightgreen;
+  }
+
+   .row{
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin: 10;
+   }
+
+   .play-container {
+    padding: 2em;
+    border: 1px solid lightgray;
+    margin-bottom: 1em;
+    float: left;
+    clear: both;
+    width: 100%;
+
+    input {
+        padding: 3px;
+        margin-bottom: 2em;
+        border-radius: 3px;         
+        align-self:  left;
+    }
+
+    label{
+        display: block;
+    }
+.field{
+    float: left;
+    clear: both;
+}
+   }

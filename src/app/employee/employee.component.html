@@ -1,0 +1,57 @@
+
+
+<div class="row">
+    <button (click)="ShowNewForm()" class="button-new">New Employee</button>
+</div>
+
+
+<form [hidden]="hidenewform" #employeeform="ngForm" (ngSubmit)="createEmployee(employeeform.value)">
+    <div class="play-container">
+    <h2>Create New Employee</h2>
+
+     <div class="field">
+     <label>First Name:</label>
+     <input type="text" ngModel name="FirstName">
+    </div>
+
+    <div class="field">
+        <label>Last Name:</label>
+        <input type="text" ngModel name="LastName">
+       </div>
+    
+    <div class="field">
+    <label>State:</label>
+    <input type="text" ngModel name="HomeState">
+    </div>
+
+    <div class="field">
+    <label>Work Email:</label>
+    <input type="text"  ngModel name="WorkEMail">
+    </div>
+
+    <div class="field">
+    <label>Gender:</label>
+    <input type="text"  ngModel name="Gender">
+    </div>
+
+    <div class="field">
+        <button class="button-create">Save Employee</button>
+    </div>
+
+</div>
+ </form>
+
+
+
+<h1>Employees:</h1>
+
+<ul *ngIf="employees">
+    <li *ngFor="let employee of employees">
+      <p class="name">Name: {{ employee.FirstName }} {{ employee.LastName }}</p>
+      <p class="name">State: {{ employee.HomeState }}</p>
+  
+      <p class="name">Gender: {{ employee.Gender }}</p>
+      <p class="name">Personal Email:<a class="site" href="mailto:{{employee.PersonalEMail}}" > {{ employee.PersonalEMail }}</a></p>
+      <p class="name">Work Email: <a class="site" href="mailto:{{employee.WorkEMail}}" >{{employee.WorkEMail}}</a></p>
+    </li>
+  </ul>
